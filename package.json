@@ -1,0 +1,36 @@
+{
+  "name": "api-upload-image",
+  "version": "1.0.0",
+  "description": "project created for didactic purposes of sending images on aws with s3",
+  "main": "handler.ts",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "local": "serverless offline"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "serverless",
+    "s3"
+  ],
+  "author": "Carlos Felipe",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.106",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-offline": "^8.0.0",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "lambda-multipart-parser": "^1.0.1"
+  }
+}

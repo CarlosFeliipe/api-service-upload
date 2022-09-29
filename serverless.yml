@@ -1,0 +1,30 @@
+service: api-upload-image
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 256
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PostObject
+      Resource:
+        - "arn:aws:s3:::*"
+
+functions:
+  uploadImage:
+    handler: handler.upload
+    environment:
+      bucket: your name bucket
+    events:
+      - httpApi:
+          path: /upload
+          method: post
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+  - serverless-offline
+	
+useDotenv: true
